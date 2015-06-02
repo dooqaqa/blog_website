@@ -1,5 +1,5 @@
-
 <?php
+header('Content-Type: text/html; charset=UTF-8');
 require("key.php");
 define(DB_TABLENAME, 'blogs');
 define(DB_USERNAME, 'user');
@@ -30,7 +30,7 @@ if ("title_check" == $mode) {
 	$body = $_POST["b"];
 	//echo $body;
 	if ($fp = fopen("blogs/" . $topic . ".txt", "w")) {
-		if (fwrite($fp, $body)) {
+		if (fwrite($fp, stripslashes($body))) {
 			fclose($fp);
 			save_blog_db($topic);
 			echo $topic . "good";

@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>Ğ´°É</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>å†™å§</title>
 <style type="text/css">
 body{ font-size:12px;}
 #ed{ height:300px; width:800px; background-color: }
@@ -171,56 +171,56 @@ function getobjpos(el,left){
 	     width     :890,
 		 height    :700,
 	     /*facebg    : [
-			 {bgimg:"-4px -4px",title:"Î¢Ğ¦",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220846596.p.gif"},{bgimg:"-31px -4px",title:"´óĞ¦",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220859814.p.gif"},{bgimg:"-58px -4px",title:"ÇÔĞ¦",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220911971.p.gif"},{bgimg:"-85px -4px",title:"Õ£ÑÛ",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220928549.p.gif"},{bgimg:"-112px -4px",title:"¹íÁ³",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220928549.p.gif"},{bgimg:"-139px -4px",title:"É«É«",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220951955.p.gif"},{bgimg:"-167px -4px",title:"±©ÑÀ",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220958111.p.gif"},{bgimg:"-194px -4px",title:"ÌÖÑá",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/221004564.p.gif"}
+			 {bgimg:"-4px -4px",title:"å¾®ç¬‘",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220846596.p.gif"},{bgimg:"-31px -4px",title:"å¤§ç¬‘",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220859814.p.gif"},{bgimg:"-58px -4px",title:"çªƒç¬‘",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220911971.p.gif"},{bgimg:"-85px -4px",title:"çœ¨çœ¼",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220928549.p.gif"},{bgimg:"-112px -4px",title:"é¬¼è„¸",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220928549.p.gif"},{bgimg:"-139px -4px",title:"è‰²è‰²",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220951955.p.gif"},{bgimg:"-167px -4px",title:"æš´ç‰™",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220958111.p.gif"},{bgimg:"-194px -4px",title:"è®¨åŒ",wl:22,src:"http://album.hi.csdn.net/app_uploads/wtcsy/20090719/221004564.p.gif"}
 		 ],*/
-	     fontsizedata     : { fontSize:["×ÖºÅ1","×ÖºÅ2","×ÖºÅ3","×ÖºÅ4","×ÖºÅ5","×ÖºÅ6","×ÖºÅ7"],
-							  fontname:["ËÎÌå","ºÚÌå","¿¬Ìå","Á¥Êé","Ó×Ô²","Arial","Georgia","Verdana","Helvetica"]
+	     fontsizedata     : { fontSize:["å­—å·1","å­—å·2","å­—å·3","å­—å·4","å­—å·5","å­—å·6","å­—å·7"],
+							  fontname:["å®‹ä½“","é»‘ä½“","æ¥·ä½“","éš¶ä¹¦","å¹¼åœ†","Arial","Georgia","Verdana","Helvetica"]
 		 },
 		 oninit:function(){} 
 	 },
 	 initialize:function(container,b,options){
 		 this.data        = [
-			 {obj:null,bgimg:"-0px -57px",active:"-0px -28px",title:"¼Ó´Ö",width:22,cbg:"-0px -2px",action:"Exec",args:["bold",null],exist:true},
-			 {obj:null,bgimg:"-30px -57px",active:"-30px -28px",title:"Ğ±Ìå",width:22,cbg:"-30px -2px",action:"Exec",args:["Italic",null],exist:true},
-			 {obj:null,bgimg:"-58px -57px",active:"-58px -28px",title:"ÏÂ»®Ïß",width:22,cbg:"-58px -2px",action:"Exec",args:["Underline",null],exist:true},
-			 {obj:null,bgimg:"-86px -57px",title:"×ÖºÅ",width:73,cbg:"-86px -57px",action:"Fontsize",args:[],exist:true},
-			 {obj:null,bgimg:"-86px -28px",title:"×ÖÌå",width:73,cbg:"-86px -28px",action:"FontName",args:[],exist:true},
-			 {obj:null,bgimg:"-164px -57px",title:"ÎÄ×ÖÑÕÉ«",width:22,bgcolor:"#000000",cbg:"-164px -2px",action:"Fontcolor",args:[],exist:true},
-			 {obj:null,bgimg:"-194px -57px",title:"²åÈëÁ´½Ó",width:22,cbg:"-194px -2px",action:"CreateLink",args:[],exist:true},
-			 {obj:null,bgimg:"-45px -84px",title:"¼ôÌù",width:22,cbg:"-45px -192px",action:"Exec",args:["Cut",null],exist:true},
-			 {obj:null,bgimg:"-76px -84px",title:"¸´ÖÆ",width:22,cbg:"-76px -192px",action:"Exec",args:["Copy",null],exist:true},			 
-			 {obj:null,bgimg:"-58px -140px",title:"×ó¶ÔÆë",width:22,cbg:"-58px -247px",action:"Exec",args:["JustifyLeft",null],exist:true},
-			 {obj:null,bgimg:"-86px -140px",title:"¾ÓÖĞ¶ÔÆë",width:22,cbg:"-86px -247px",action:"Exec",args:["JustifyCenter",null],exist:true},
-			 {obj:null,bgimg:"-113px -140px",title:"ÓÒ¶ÔÆë",width:22,cbg:"-113px -247px",action:"Exec",args:["JustifyRight",null],exist:true},
-			 {obj:null,bgimg:"-476px -84px",active:"-476px -299px",title:"ÏîÄ¿·ûºÅ",width:22,cbg:"-476px -192px",action:"Exec",args:["InsertUnorderedList",null],exist:true},
-			 {obj:null,bgimg:"-505px -84px",active:"-505px -299px",title:"±àºÅ",width:22,cbg:"-505px -192px",action:"Exec",args:["InsertOrderedList",null],exist:true},
-			 {obj:null,bgimg:"-333px -140px",title:"²åÈë±í¸ñ",width:22,cbg:"-333px -247px",action:"Addtable",args:[],exist:true},
-			 {obj:null,bgimg:"-532px -84px",title:"¼õÉÙËõ½ø",width:22,cbg:"-532px -192px",action:"Exec",args:["Outdent",null],exist:true},
-			 {obj:null,bgimg:"-560px -84px",title:"Ôö¼ÓËõ½ø",width:22,cbg:"-560px -192px",action:"Exec",args:["Indent",null],exist:true},
-			 {obj:null,bgimg:"-455px -140px",title:"Çå³ıÑùÊ½",width:22,cbg:"-455px -247px",action:"Exec",args:["RemoveFormat",null],exist:true},
-			 {obj:null,bgimg:"-222px -57px",title:"²åÈëÍ¼Æ¬",width:73,cbg:"-222px -2px",action:"InsertImage",args:[],exist:true},
-			 //{obj:null,bgimg:"-380px -57px",title:"²åÈë±íÇé",width:74,cbg:"-380px -2px",action:"Expression",args:[],exist:true},
-			 {obj:null,bgimg:"-460px -57px",title:"×Ô¶¯ÅÅ°æ",width:71,cbg:"-460px -2px",action:"Layout",args:[],exist:true},
-			 {obj:null,title:"±£´æ",width:74,cbg:"",action:"Save",args:[],exist:true},
+			 {obj:null,bgimg:"-0px -57px",active:"-0px -28px",title:"åŠ ç²—",width:22,cbg:"-0px -2px",action:"Exec",args:["bold",null],exist:true},
+			 {obj:null,bgimg:"-30px -57px",active:"-30px -28px",title:"æ–œä½“",width:22,cbg:"-30px -2px",action:"Exec",args:["Italic",null],exist:true},
+			 {obj:null,bgimg:"-58px -57px",active:"-58px -28px",title:"ä¸‹åˆ’çº¿",width:22,cbg:"-58px -2px",action:"Exec",args:["Underline",null],exist:true},
+			 {obj:null,bgimg:"-86px -57px",title:"å­—å·",width:73,cbg:"-86px -57px",action:"Fontsize",args:[],exist:true},
+			 {obj:null,bgimg:"-86px -28px",title:"å­—ä½“",width:73,cbg:"-86px -28px",action:"FontName",args:[],exist:true},
+			 {obj:null,bgimg:"-164px -57px",title:"æ–‡å­—é¢œè‰²",width:22,bgcolor:"#000000",cbg:"-164px -2px",action:"Fontcolor",args:[],exist:true},
+			 {obj:null,bgimg:"-194px -57px",title:"æ’å…¥é“¾æ¥",width:22,cbg:"-194px -2px",action:"CreateLink",args:[],exist:true},
+			 {obj:null,bgimg:"-45px -84px",title:"å‰ªè´´",width:22,cbg:"-45px -192px",action:"Exec",args:["Cut",null],exist:true},
+			 {obj:null,bgimg:"-76px -84px",title:"å¤åˆ¶",width:22,cbg:"-76px -192px",action:"Exec",args:["Copy",null],exist:true},			 
+			 {obj:null,bgimg:"-58px -140px",title:"å·¦å¯¹é½",width:22,cbg:"-58px -247px",action:"Exec",args:["JustifyLeft",null],exist:true},
+			 {obj:null,bgimg:"-86px -140px",title:"å±…ä¸­å¯¹é½",width:22,cbg:"-86px -247px",action:"Exec",args:["JustifyCenter",null],exist:true},
+			 {obj:null,bgimg:"-113px -140px",title:"å³å¯¹é½",width:22,cbg:"-113px -247px",action:"Exec",args:["JustifyRight",null],exist:true},
+			 {obj:null,bgimg:"-476px -84px",active:"-476px -299px",title:"é¡¹ç›®ç¬¦å·",width:22,cbg:"-476px -192px",action:"Exec",args:["InsertUnorderedList",null],exist:true},
+			 {obj:null,bgimg:"-505px -84px",active:"-505px -299px",title:"ç¼–å·",width:22,cbg:"-505px -192px",action:"Exec",args:["InsertOrderedList",null],exist:true},
+			 {obj:null,bgimg:"-333px -140px",title:"æ’å…¥è¡¨æ ¼",width:22,cbg:"-333px -247px",action:"Addtable",args:[],exist:true},
+			 {obj:null,bgimg:"-532px -84px",title:"å‡å°‘ç¼©è¿›",width:22,cbg:"-532px -192px",action:"Exec",args:["Outdent",null],exist:true},
+			 {obj:null,bgimg:"-560px -84px",title:"å¢åŠ ç¼©è¿›",width:22,cbg:"-560px -192px",action:"Exec",args:["Indent",null],exist:true},
+			 {obj:null,bgimg:"-455px -140px",title:"æ¸…é™¤æ ·å¼",width:22,cbg:"-455px -247px",action:"Exec",args:["RemoveFormat",null],exist:true},
+			 {obj:null,bgimg:"-222px -57px",title:"æ’å…¥å›¾ç‰‡",width:73,cbg:"-222px -2px",action:"InsertImage",args:[],exist:true},
+			 //{obj:null,bgimg:"-380px -57px",title:"æ’å…¥è¡¨æƒ…",width:74,cbg:"-380px -2px",action:"Expression",args:[],exist:true},
+			 {obj:null,bgimg:"-460px -57px",title:"è‡ªåŠ¨æ’ç‰ˆ",width:71,cbg:"-460px -2px",action:"Layout",args:[],exist:true},
+			 {obj:null,title:"ä¿å­˜",width:74,cbg:"",action:"Save",args:[],exist:true},
 		 ];		 
 		 this.container   = container;  
 		 this._body       = $c("div");    
-		 this.toolbar     = $c("div");     //¹¤¾ßÀ¸
-		 this.iframe      = $c("iframe");  //±à¼­Çø
-		 this.bottom      = $c("div");     //µ×²¿
-		 this.textarea    = $c("textarea"); //ÏÔÊ¾Ô´´úÂëµÄ¿ò¿ò 
+		 this.toolbar     = $c("div");     //å·¥å…·æ 
+		 this.iframe      = $c("iframe");  //ç¼–è¾‘åŒº
+		 this.bottom      = $c("div");     //åº•éƒ¨
+		 this.textarea    = $c("textarea"); //æ˜¾ç¤ºæºä»£ç çš„æ¡†æ¡† 
 		 this.lightbox    = b;             //lightbox
-		 this.original    = $c("input");   //ÏÔÊ¾Ô´´úÂëµÄ°´Å¦
+		 this.original    = $c("input");   //æ˜¾ç¤ºæºä»£ç çš„æŒ‰çº½
 		 this.ed          = null;
 		 this.isfocus     = false;
 		 Extend(this.options,options||{});		           
 
-		 this.fontsizedata= this.options.fontsizedata;   //×ÖÌåÊı¾İÔ´
-		 //this.facebg      = this.options.facebg;         //±íÇéÊı¾İÔ´
-		 this.width       = this.options.width;          //±à¼­ÇøµÄ¿í¶È
-		 this.height      = this.options.height;          //±à¼­ÇøµÄ¸ß¶È
+		 this.fontsizedata= this.options.fontsizedata;   //å­—ä½“æ•°æ®æº
+		 //this.facebg      = this.options.facebg;         //è¡¨æƒ…æ•°æ®æº
+		 this.width       = this.options.width;          //ç¼–è¾‘åŒºçš„å®½åº¦
+		 this.height      = this.options.height;          //ç¼–è¾‘åŒºçš„é«˜åº¦
 		 this.oninit      = this.options.oninit;
-		 this.rang        = null;                        //Ñ¡ÖĞÇø
+		 this.rang        = null;                        //é€‰ä¸­åŒº
 		 this.Fpop        = null;              
 		 this._body.appendChild(this.toolbar);
 		 this._body.appendChild(this.iframe);
@@ -234,13 +234,13 @@ function getobjpos(el,left){
 		 with(this.textarea){ className = "textarea";style.width = isIE?this.width-2+"px":this.width+"px";style.height = isIE?this.height-66+"px":this.height-70+"px";}
 		 with(this.iframe){src = "about:blank";width =isIE?this.width:this.width-4;height=isIE?this.height-66:this.height-70; }  
 		 with(this.original){type = "checkbox";className="checkbox";align="top"};
-		 with(this.bottom){className   = "bottom";innerHTML   = "<span>ÏÔÊ¾Ô´´úÂë</span>";insertBefore(this.original,this.bottom.childNodes[0]);};
+		 with(this.bottom){className   = "bottom";innerHTML   = "<span>æ˜¾ç¤ºæºä»£ç </span>";insertBefore(this.original,this.bottom.childNodes[0]);};
 		 this.ed=isIE?this.iframe.contentWindow.document:this.iframe.contentDocument;
 		 this.ed.open();
 		 var div = isIE?"<div></div>":"";
 		 this.ed.write("<html><head><style>body{margin:5px;font-size:16px;word-wrap:break-word}</style></head><body id='my_body'>"+div+"</body></html>");
 		 this.ed.close();
-		 with(this.ed){contentEditable = true;designMode = "on";}; //ÉèÖÃ±à¼­ÇøÎª¿É±à¼­
+		 with(this.ed){contentEditable = true;designMode = "on";}; //è®¾ç½®ç¼–è¾‘åŒºä¸ºå¯ç¼–è¾‘
 		 
 		 for(var i = 0;i<this.data.length;i++)
 		 {
@@ -257,13 +257,13 @@ function getobjpos(el,left){
 				 addListener(o,"click",Bind(self,self[self.data[i].action],[o].concat(self.data[i].args))); 		
 			 })
 		 }
-		 //////////////////////////Éú³É¹¤¾ßÀ¸
+		 //////////////////////////ç”Ÿæˆå·¥å…·æ 
 			 addListener(this.iframe.contentWindow,"focus",function(){self.isfocus = true;});
 			 addListener(this.iframe.contentWindow,"blur",function(){self.isfocus  = false;});		 
 		 	 addListener(this.ed,'mousedown',Bind(this,this.Show));
 			 addListener(this.ed,'mouseup',Bind(this,this.Show));
-			 //////////////////////////Õâ2¸öÊÂ¼şÊÇÀ´ÅĞ¶Ï¹â±êËùÔÚÎ»ÖÃÊÇ·ñ±ğ±à¼­
-			 addListener(this.original,'click',Bind(this,this.Showoriginal,[this.original]));  //ÏÔÊ¾Ô´´úÂë
+			 //////////////////////////è¿™2ä¸ªäº‹ä»¶æ˜¯æ¥åˆ¤æ–­å…‰æ ‡æ‰€åœ¨ä½ç½®æ˜¯å¦åˆ«ç¼–è¾‘
+			 addListener(this.original,'click',Bind(this,this.Showoriginal,[this.original]));  //æ˜¾ç¤ºæºä»£ç 
 	 },
 	 Show:function(){                   
 		var elm = [[0,"Bold"],[1,"Italic"],[2,"Underline"],[12,"InsertUnorderedList"],[13,"InsertOrderedList"]]; 
@@ -321,18 +321,18 @@ function getobjpos(el,left){
 			  this.rang = this.ed.selection.createRange();
 		 }
 		 this.lightbox.Show();
-		 this.makebody(this.Imagepopoup,"350px","²åÈëÍ¼Æ¬","InsertImage","Imagepopoup");	
+		 this.makebody(this.Imagepopoup,"350px","æ’å…¥å›¾ç‰‡","InsertImage","Imagepopoup");	
 	 },
 	 CreateLink:function(o){
 		 if(isIE)this.rang = this.ed.selection.createRange(); 
 		 this.lightbox.Show();	
-		 this.makebody(this.Linkpopoup,"350px","²åÈëÁ¬½Ó","CreateLink","Linkpopoup");	
+		 this.makebody(this.Linkpopoup,"350px","æ’å…¥è¿æ¥","CreateLink","Linkpopoup");	
 	 },
 	 Fontcolor:function(o){
 		var self = this;
 		if(!this.fontcolorpopup)
 		{
-			var color = new popoup({width:"210px",title:"ÑÕÉ«Ñ¡Ôñ"});
+			var color = new popoup({width:"210px",title:"é¢œè‰²é€‰æ‹©"});
             this.fontcolorpopup = color.container;
 			with(color.container){
 				style.left = getobjpos(o,1) +"px";style.top  = getobjpos(o,0) + o.offsetHeight +"px";
@@ -360,7 +360,7 @@ function getobjpos(el,left){
 		 var self = this;
 		 if(!this.facebgpopup)
 		 {
-			var expr = new popoup({width:"190px",title:"²åÈë±íÇé"});
+			var expr = new popoup({width:"190px",title:"æ’å…¥è¡¨æƒ…"});
             this.facebgpopup = expr.container;
 			with(expr.container){
 				style.left = getobjpos(o,1) +"px";style.top  = getobjpos(o,0) + o.offsetHeight +"px";
@@ -396,7 +396,7 @@ function getobjpos(el,left){
 		 var self = this;
 		 if(!this.fontsizepopup)
 		 {	 
-			var size = new popoup({width:"210px",title:"×ÖºÅ"});
+			var size = new popoup({width:"210px",title:"å­—å·"});
             this.fontsizepopup = size.container;
 			with(size.container){
 				style.left = getobjpos(o,1) +"px";style.top  = getobjpos(o,0) + o.offsetHeight +"px";
@@ -422,7 +422,7 @@ function getobjpos(el,left){
 		 var self = this;
 		 if(!this.fontnamepopup)
 		 {	 
-			var name = new popoup({width:"200px",title:"×ÖÌå"});
+			var name = new popoup({width:"200px",title:"å­—ä½“"});
             this.fontnamepopup = name.container;
 			with(name.container){
 				style.left = getobjpos(o,1) +"px";style.top  = getobjpos(o,0) + o.offsetHeight +"px";
@@ -450,7 +450,7 @@ function getobjpos(el,left){
 		     var self = this;
 			 this[n]= new popoup({width:w,title:t});		 
 			 this[n].pos();
-			 $$(this[n].container,"div")[1].innerHTML = "<div style=' margin-top:6px; margin-left:10px'><span >Á¬½ÓµØÖ·</span>¡¡<input style='width:200px;' type='text' /></div><div style='text-align:center; padding-top:15px;'><img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220836549.p.gif'>¡¡<img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220726721.p.gif'></div>"			 
+			 $$(this[n].container,"div")[1].innerHTML = "<div style=' margin-top:6px; margin-left:10px'><span >è¿æ¥åœ°å€</span>ã€€<input style='width:200px;' type='text' /></div><div style='text-align:center; padding-top:15px;'><img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220836549.p.gif'>ã€€<img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220726721.p.gif'></div>"			 
 			 this[n].elm = [$$(this[n].container,"input")[0],$$(this[n].container,"img")[0],$$(this[n].container,"img")[1]];
 			 this[n].elm[0].focus()
 			 addListener(this[n].elm[1],'click',Bind(this,this.Execa,[null,f]));
@@ -472,9 +472,9 @@ function getobjpos(el,left){
 		 if(!this.tablepopup)
 		 {	 
 		     var self = this;
-			 this.tablepopup = new popoup({width:"300px",title:"²åÈë±í¸ñ"});
+			 this.tablepopup = new popoup({width:"300px",title:"æ’å…¥è¡¨æ ¼"});
 			 this.tablepopup.pos();
-			 $$(this.tablepopup.container,"div")[1].innerHTML = "<div style='margin-left:30px; margin-top:7px;'>ĞĞÊı£º<input style='width:50px; height:13px' type='text' />¡¡ÁĞÊı£º<input style='width:50px;height:13px' type='text' /></div><div style=' margin-left:30px; margin-top:7px;'>±í¸ñµÄ¿í¶È£º<input style='width:50px; height:13px' type='text' /> px</div><div style=' margin-left:30px; margin-top:7px;'>±íĞĞµÄ¸ß¶È£º<input style='width:50px; height:13px' type='text' /> px<div style='text-align:center; margin-left:30px; margin-top:7px;'><img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220836549.p.gif'>¡¡<img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220726721.p.gif'></div>"	
+			 $$(this.tablepopup.container,"div")[1].innerHTML = "<div style='margin-left:30px; margin-top:7px;'>è¡Œæ•°ï¼š<input style='width:50px; height:13px' type='text' />ã€€åˆ—æ•°ï¼š<input style='width:50px;height:13px' type='text' /></div><div style=' margin-left:30px; margin-top:7px;'>è¡¨æ ¼çš„å®½åº¦ï¼š<input style='width:50px; height:13px' type='text' /> px</div><div style=' margin-left:30px; margin-top:7px;'>è¡¨è¡Œçš„é«˜åº¦ï¼š<input style='width:50px; height:13px' type='text' /> px<div style='text-align:center; margin-left:30px; margin-top:7px;'><img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220836549.p.gif'>ã€€<img src='http://album.hi.csdn.net/app_uploads/wtcsy/20090719/220726721.p.gif'></div>"	
 			 var o = $$(this.tablepopup.container,"input");
 			 this.tablepopup.elm = [o[0],o[1],o[2],o[3],$$(this.tablepopup.container,"img")[0],$$(this.tablepopup.container,"img")[1]];
 			 addListener(this.tablepopup.elm[4],'click',Bind(this,this.Execa,[null,"CreateTable"]));
@@ -591,7 +591,7 @@ function getobjpos(el,left){
 var popoup = new Class({
 	options:{
 		width:"200px",
-		title:"±êÌâ"
+		title:"æ ‡é¢˜"
 	},
 	initialize:function(options){
 		this.container = create("div",document.body);
