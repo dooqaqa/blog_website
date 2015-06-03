@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 require("key.php");
-define(DB_TABLENAME, 'blogs');
+define(DB_TABLENAME, 'posts');
 define(DB_USERNAME, 'user');
 define(DB_PWD, 'pwd');
 $mode=$_POST["q"];
@@ -29,7 +29,7 @@ if ("title_check" == $mode) {
 } else if ("body_save" == $mode){
 	$body = $_POST["b"];
 	//echo $body;
-	if ($fp = fopen("blogs/" . $topic . ".txt", "w")) {
+	if ($fp = fopen("posts/" . $topic . ".txt", "w")) {
 		if (fwrite($fp, stripslashes($body))) {
 			fclose($fp);
 			save_blog_db($topic);

@@ -20,7 +20,7 @@
 			{
 				if (httpreq.readyState==4 && httpreq.status==200)
 				{
-					var res = httpreq.responseXML.documentElement.getElementsByTagName("blog");
+					var res = httpreq.responseXML.documentElement.getElementsByTagName("post");
 					for (i = 0; i < res.length; i++) {
 						//var new_div = document.createElement("div");
 						//new_div.innerHTML = res[i].getElementsByTagName("body");
@@ -30,7 +30,7 @@
 					}
 				}
 			}
-			var url =  "load_blog.php";
+			var url =  "load_posts.php";
 			httpreq.open("POST", url, true);
 			httpreq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 			httpreq.send("q=0&qq=");

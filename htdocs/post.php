@@ -66,7 +66,7 @@ function TitleCheck(str)
 				document.getElementById("title_check").innerHTML=httpreq.responseText;
 			}
 		}
-		var url =  "save_blog.php";
+		var url =  "save_posts.php";
 		httpreq.open("POST", url, true);
 		httpreq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		httpreq.send("q=" + "title_check&qq=" + str);
@@ -514,7 +514,7 @@ function getobjpos(el,left){
 					alert(httpreq.responseText);
 				}
 			}
-			var url =  "save_blog.php";
+			var url =  "save_posts.php";
 			httpreq.open("POST", url, true);
 			httpreq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 			httpreq.send("q=" + "body_save&qq=" + hehe + "&b=" + testhehe);
