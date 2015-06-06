@@ -49,14 +49,14 @@ height:24px; width:100%; background-image:url(http://album.hi.csdn.net/app_uploa
 <br><br><br>
 <div id='ssss'></div>
 <script>
-var hehe;
+var titletxt;
 function TitleCheck(str)
 {
 	if ("" == str) {
 		document.getElementById("title_check").innerHTML="";
 		return;
 	}
-	hehe = str
+	titletxt = str
 	var httpreq = GetXmlHttpObject();
 	if (httpreq) {
 		httpreq.onreadystatechange=function()
@@ -69,7 +69,7 @@ function TitleCheck(str)
 		var url =  "save_posts.php";
 		httpreq.open("POST", url, true);
 		httpreq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-		httpreq.send("q=" + "title_check&qq=" + str);
+		httpreq.send("q=" + "title_check&qq=" + encodeURIComponent(str));
 	}
 }
 
@@ -500,8 +500,8 @@ function getobjpos(el,left){
 		 if(isIE){e.cancelBubble=true}else{e.stopPropagation()}
 	 },
 	 Save:function(){
-		var testhehe = this.ed.body.innerHTML;
-		if ("" == testhehe) {
+		var bodytxt = this.ed.body.innerHTML;
+		if ("" == bodytxt) {
 			return;
 		}
 		var httpreq = GetXmlHttpObject();
@@ -510,14 +510,14 @@ function getobjpos(el,left){
 			{
 				if (httpreq.readyState==4 && httpreq.status==200)
 				{
-					document.getElementById("title_check").innerHTML=httpreq.responseText;
+					//document.getElementById("title_check").innerHTML=httpreq.responseText;
 					alert(httpreq.responseText);
 				}
 			}
 			var url =  "save_posts.php";
 			httpreq.open("POST", url, true);
 			httpreq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-			httpreq.send("q=" + "body_save&qq=" + hehe + "&b=" + testhehe);
+			httpreq.send("q=" + "body_save&qq=" + encodeURIComponent(titletxt) + "&b=" + encodeURIComponent(bodytxt));
 		}
 	 },
 	 Execa:function(num,stamp){
