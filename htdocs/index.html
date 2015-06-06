@@ -20,13 +20,17 @@
 			{
 				if (httpreq.readyState==4 && httpreq.status==200)
 				{
-					var res = httpreq.responseXML.documentElement.getElementsByTagName("post");
-					for (i = 0; i < res.length; i++) {
-						//var new_div = document.createElement("div");
-						//new_div.innerHTML = res[i].getElementsByTagName("body");
-						//document.getElementById("first_div").append(new_div);
-						document.getElementById("first_div").innerHTML += "<p>" + res[i].getElementsByTagName("body")[0].firstChild.nodeValue + "</p>";
-						//document.getElementById("first_div").innerHTML += "<p>" + "<font size=5 color=#cc0000>asdasdasd</font>" + "</p>";
+					//var res = httpreq.responseXML.documentElement.getElementsByTagName("post");
+					var res = eval ("(" + httpreq.responseText + ")");
+					var test = res.count;
+					for (i = 0; i < res.count; i++) {
+						//document.getElementById("first_div").innerHTML += "<p>" + res[i].getElementsByTagName("body")[0].firstChild.nodeValue + "</p>";
+						if (0 != i) {
+							document.getElementById("first_div").innerHTML += "<br/><br/>";
+						}
+						document.getElementById("first_div").innerHTML += "<div class=\"fltlft\">" + res.posts[i].topic + "</div>"
+						document.getElementById("first_div").innerHTML += "<div align=\"right\">" + res.posts[i].time + "</div>"
+						document.getElementById("first_div").innerHTML += "<div>" + res.posts[i].body + "</div>";
 					}
 				}
 			}
@@ -47,16 +51,15 @@
       <li><a href="/about">档案</a></li>
     </ul>
   <!-- end .sidebar1 --></div>
-  <div class="content">
-  <div id="first_div">
-    <h1 align="center" style="color: #000">&nbsp;</h1>
-    <p align="center">&nbsp;</p>
+  
+  <div id="first_div" style="width:60%; position:fixed; left:30%;">
+
+  </div>
   </div>
   
-  <div style="width:75%; position:fixed; left:25%; top:80%;_position:absolute; _margin-top: 0; _top:expression(documentElement.scrollTop+(documentElement.clientHeight-this.offsetHeight)/2+50);">
-      <!embed src="music/RainyMood_20152821646.mp3" width=100% height=15% palette="red|black" autostart="false" loop="true"/>
+  <div style="width:75%; position:fixed; left:25%; top:85%;_position:absolute; _margin-top: 0; _top:expression(documentElement.scrollTop+(documentElement.clientHeight-this.offsetHeight)/2+50);">
+      <embed src="music/RainyMood_20152821646.mp3" width=100% height=15% palette="red|black" autostart="false" loop="true"/>
   </div>
   <!-- end .content --></div>
-<!-- end .container --></div>
 </body>
 </html>

@@ -30,7 +30,7 @@ if ("title_check" == $mode) {
 	$body = $_POST["b"];
 	//echo $body;
 	if ($fp = fopen("posts/" . $topic . ".txt", "w")) {
-		if (fwrite($fp, stripslashes($body))) {
+		if (fwrite($fp, $body)) { // 若使用xml格式数据,应调用stripslashes($body),使用JSON则不必
 			fclose($fp);
 			save_blog_db($topic);
 			echo $topic . "good";

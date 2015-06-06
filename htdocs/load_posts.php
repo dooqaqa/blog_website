@@ -18,13 +18,13 @@ if (!$dblink) {
 mysql_select_db(DB_DATABASENAME, $dblink);
 //echo "limit:" . $blogs_per_time;
 if (null == $time or "" == $time) {
-	$sql = sprintf("select * from %s order by post_time limit %d", DB_TABLENAME, $blogs_per_time);
+	$sql = sprintf("select * from %s order by post_time limit %d", DB_TABLENAME, $max_posts);
 } else {
-	$sql = sprintf("select * from %s where post_time < '%s' order by post_time limit %d", DB_TABLENAME, $time, $blogs_per_time);
+	$sql = sprintf("select * from %s where post_time < '%s' order by post_time limit %d", DB_TABLENAME, $time, $max_posts);
 }
 //echo $sql;
 $result = mysql_query($sql);
-echo_xml($result, $max_post);
+echo_json($result, $max_posts);
 mysql_close($dblink);
 
 function echo_xml($sql_result, $max_post)
@@ -58,14 +58,16 @@ function echo_xml($sql_result, $max_post)
 }
 
 
-function echo_json($sql_result, $max_post)
+function echo_json($sql_result, $max_posts)
 {
 	$file_found = 0;
-	echo '<?xml version="1.0" encoding="ISO-8859-1"?>';
 	echo "{\"posts\":[";
 	while($row = mysql_fetch_array($sql_result) and $file_found < $max_posts) {
 		$body = "";
 		if ($body = file_get_contents("posts/" . $row['file_name'])) {
+			if (0 < $file_found) {
+				echo ",";
+			}
 			echo "{\"topic\":\"";
 			echo $row['topic'];
 			echo "\",";
@@ -83,6 +85,6 @@ function echo_json($sql_result, $max_post)
 			echo "bad2";
 		}
 	}
-	echo "]}";
+	echo "],\"count\":\"" . $file_found . "\"}";
 }
 ?>
