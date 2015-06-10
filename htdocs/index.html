@@ -20,11 +20,9 @@
 			{
 				if (httpreq.readyState==4 && httpreq.status==200)
 				{
-					//var res = httpreq.responseXML.documentElement.getElementsByTagName("post");
 					var res = eval ("(" + httpreq.responseText + ")");
 					var test = res.count;
 					for (i = 0; i < res.count; i++) {
-						//document.getElementById("first_div").innerHTML += "<p>" + res[i].getElementsByTagName("body")[0].firstChild.nodeValue + "</p>";
 						if (0 != i) {
 							document.getElementById("first_div").innerHTML += "<br/><br/>";
 						}
@@ -40,16 +38,59 @@
 			httpreq.send("q=0&qq=");
 		}
  }
+ 
+ var ac = new (window.AudioContext || window.webkitAudioContext)();
+ var active_src = null;
+ 
+ function audio_reset()
+ {
+	if (active_src) {
+		active_src[active_src.stop ? "stop" : "noteOff"](0);
+		active_src = null;
+	}
+	document.getElementById("play_href").innerHTML = "听雨";
+	return;
+ }
+ function play()
+ {
+	if (active_src) {
+		audio_reset();
+		return;
+	}
+		var httpreq = GetXmlHttpObject();
+		if (httpreq) {
+			httpreq.onload = function() {
+				ac.decodeAudioData(httpreq.response, function(buffer){
+					var bufferSource = ac.createBufferSource();
+					bufferSource.buffer = buffer;
+					bufferSource.connect(ac.destination);
+					bufferSource[bufferSource.start ? "start" : "noteOn"](0);
+					bufferSource.loop = true;
+					active_src = bufferSource;
+					document.getElementById("play_href").innerHTML = " 郑长老，收了神通吧！";				
+				}, function(err){
+					audio_reset();
+				});
+			}
+			var url =  "music/RainyMood_20152821646.mp3";
+			httpreq.open("GET", url, true);
+			httpreq.responseType = "arraybuffer";
+			httpreq.send();
+			document.getElementById("play_href").innerHTML = "  祈雨中...";
+		}
+ }
 
 </script>
 <div class="container">
   <div class="sidebar1">
-      <div style="width:30%; position:fixed; top:3%; left:5%;"><img src="image/face.jpg" width="194" height="195" alt="face" /></div>
+      <!div style="width:20%; position:fixed; top:3%; left:5%;"><!img src="image/face.jpg" width="194" height="195" alt="face" />
+      <div style="width:15%; position:fixed; top:3%; left:5%;"><img src="image/face.jpg" width=100% height=100% alt="face" /></div>
     <ul class="nav">
       <li><a href="#">主页</a></li>
       <li><a href="/mud.html">大型文字MUD</a></li>
       <li><a href="https://github.com/dooqaqa" target="new">GitHub</a></li>
       <li><a href="/about">档案</a></li>
+      <li><a id="play_href" href="javascript:void(play())">听雨</a></li>
     </ul>
   <!-- end .sidebar1 --></div>
   
@@ -59,7 +100,7 @@
 </div>
   
   <div style="width:75%; position:fixed; left:25%; top:85%;_position:absolute; _margin-top: 0; _top:expression(documentElement.scrollTop+(documentElement.clientHeight-this.offsetHeight)/2+50);">
-      <embed src="music/RainyMood_20152821646.mp3" width=100% height=15% palette="red|black" autostart="false" loop="true"/>
+      <!embed src="music/RainyMood_20152821646.mp3" width=100% height=15% palette="red|black" autostart="false" loop="true"/>
   </div>
   <!-- end .content --></div>
 </body>

@@ -22,6 +22,7 @@ if (null == $time or "" == $time) {
 } else {
 	$sql = sprintf("select * from %s where post_time < '%s' order by post_time limit %d", DB_TABLENAME, $time, $max_posts);
 }
+mysql_query("set names 'utf8'");
 //echo $sql;
 $result = mysql_query($sql);
 echo_json($result, $max_posts);
@@ -82,7 +83,7 @@ function echo_json($sql_result, $max_posts)
 			echo "\"}";
 			$file_found++;
 		} else {
-			echo "bad2";
+			echo "bad2" . $row['topic'] . "  " . $row['file_name'];
 		}
 	}
 	echo "],\"count\":\"" . $file_found . "\"}";

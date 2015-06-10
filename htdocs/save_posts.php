@@ -16,6 +16,7 @@ if ("title_check" == $mode) {
 	mysql_select_db(DB_DATABASENAME, $dblink);
 	$sql = sprintf("select * from %s where topic = '%s'", DB_TABLENAME, $topic);
 	
+	mysql_query("set names 'utf8'");
 	$result = mysql_query($sql);
 	
 	if ($result and mysql_fetch_array($result)) {
@@ -53,10 +54,11 @@ function save_blog_db($topic) {
 	$sql = sprintf("insert into %s values ('%s', '%s', '%s', '%s')", DB_TABLENAME, $topic . ".txt", 
 		$topic, date("Y-m-d H:i:s"), "1");
 	
+	mysql_query("set names 'utf8'");
 	$result = mysql_query($sql);
 	
 	if ($result) {
-		echo $topic . date("Y-m-d H:i:s") . "db good";
+		echo $sql . date("Y-m-d H:i:s") . "db good";
 	} else {
 		echo $topic . "db 呵呵";
 	}
