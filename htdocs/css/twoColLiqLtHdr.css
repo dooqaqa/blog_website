@@ -105,7 +105,7 @@ ul.nav a, ul.nav a:visited { /* 对这些选择器进行分组可确保链接即
 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* 这将更改鼠标和键盘导航的背景和文本颜色 */
 	background-color: #6F7D94;
 	color: #FFF;
-	text-align:right;
+	font-size:21px;
 }
 
 /* ~~ 脚注 ~~ */
