@@ -19,16 +19,16 @@
 			httpreq.onreadystatechange=function()
 			{
 				if (httpreq.readyState==4 && httpreq.status==200) {
-					var res = eval ("(" + httpreq.responseText + ")");
+					var res = eval("(" + httpreq.responseText + ")");
 					var test = res.count;
 					for (i = 0; i < res.count; i++) {
 						if (0 != i) {
 							document.getElementById("first_div").innerHTML += "<br/><br/>";
 						}
 						document.getElementById("first_div").innerHTML += "<h4 class=\"fltlft\">" + res.posts[i].topic + "</h4>";
-						document.getElementById("first_div").innerHTML += "<div align=\"right\">" + res.posts[i].time + "</div>";
+						document.getElementById("first_div").innerHTML += "<div align=\"right\" style=\"padding-right:10%;\">" + res.posts[i].time + "</div>";
 						
-						document.getElementById("first_div").innerHTML += "<hr left=40% width=100% size=1 color=\"grey\" align=\"right\">";
+						document.getElementById("first_div").innerHTML += "<hr left=0% width=92% size=1 color=\"grey\" align=\"left\">";
 						document.getElementById("first_div").innerHTML += "<div>" + res.posts[i].body + "</div>";
 					}
 				}
@@ -132,7 +132,7 @@ window.onload = index_init;
 		</ul>
         <canvas id="cvs" style="width:inherit; height:8%; position:fixed;"></div>
 	</div>
-	<div id="first_div" style="width:60%; position:fixed; left:30%;"/>
+	<div id="first_div" style="width:70%; height:100%; position:fixed; left:30%; overflow-y:scroll;"/>
 </div>
 </body>
 </html>
